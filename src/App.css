@@ -1,38 +1,194 @@
-.App {
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f2f5, #dfe9f3);
+  color: #333;
+}
+
+/* Container */
+.container {
   text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Navigation Bar */
+nav {
+  padding: 15px;
+  background: linear-gradient(to right, #007bff, #00b894);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-radius: 0 0 10px 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+nav a {
+  margin: 0 15px;
   color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+nav a:hover {
+  color: #ffdd57;
+  transform: scale(1.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Header */
+h1 {
+  background: linear-gradient(135deg, #00b894, #00cec9);
+  color: white;
+  padding: 50px 0;
+  margin: 0;
+  border-radius: 0 0 20px 20px;
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s;
+}
+
+h1:hover {
+  transform: scale(1.02);
+}
+
+/* Sections */
+section {
+  background-color: white;
+  margin: 40px auto;
+  padding: 50px 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 5px;
+  width: 60px;
+  background: #007bff;
+  border-radius: 5px;
+}
+
+section:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+}
+
+/* Section Titles */
+h2 {
+  color: #007bff;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+/* Skill badges */
+.skills-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 25px;
+  margin: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skills-badge:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Projects List */
+.project-card {
+  background: linear-gradient(135deg, #e3f2fd, #d0e6ff);
+  padding: 20px;
+  margin: 15px auto;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  text-align: left;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+  background: linear-gradient(135deg, #d0ebff, #a0d4ff);
+}
+
+.project-card b {
+  color: #007bff;
+}
+
+/* Contact Form */
+input, textarea {
+  width: 80%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+  transition: all 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0,123,255,0.3);
+  outline: none;
+}
+
+button {
+  padding: 14px 35px;
+  background: linear-gradient(135deg, #007bff, #00b894);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #0056b3, #009e7f);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #007bff, #00b894);
+  color: white;
+  padding: 25px 0;
+  margin-top: 50px;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -6px 20px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  section {
+    width: 95%;
+    padding: 30px 15px;
   }
-  to {
-    transform: rotate(360deg);
+
+  input, textarea {
+    width: 95%;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
   }
 }
