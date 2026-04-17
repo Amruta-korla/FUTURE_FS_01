@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Fitness Gym</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<header>
+    <h1>Smart Fitness Gym</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO WITH BACKGROUND IMAGE -->
+<section id="home" class="hero">
+    <div class="overlay">
+        <h2>Transform Your Body & Mind</h2>
+        <p>Welcome to Smart Fitness Gym, your trusted fitness partner in Tanuku.</p>
+        <p>We provide high-quality training programs, modern equipment, and expert guidance.</p>
+        <p>Join us today and start your healthy lifestyle journey.</p>
+        
+        <button onclick="openForm()">Join Now</button>
+    </div>
+</section>
+
+<!-- FORM POPUP -->
+<div class="form-popup" id="joinForm">
+    <div class="form-container">
+        <h2>Join Smart Fitness Gym</h2>
+
+        <input type="text" id="name" placeholder="Enter Your Name">
+        <input type="tel" id="phone" placeholder="Enter Phone Number">
+        <input type="text" id="address" placeholder="Enter Address">
+
+        <button class="submit-btn" onclick="submitForm()">Submit</button>
+        <button class="close-btn" onclick="closeForm()">Close</button>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Us</h2>
+    <img src="gym.jpg" class="about-img">
+
+    <p>Smart Fitness Gym is one of the leading fitness centers in Panakalapalem.</p>
+    <p>We offer a clean and motivating environment with modern equipment.</p>
+    <p>Our certified trainers provide personalized fitness programs.</p>
+    <p>We focus on building strength, confidence, and discipline.</p>
+    <p>Your fitness journey starts here with us.</p>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+    <h2>Our Services</h2>
+
+    <div class="card">
+        <img src="service1.jpg">
+        <h3>Personal Training</h3>
+        <p>One-on-one expert guidance for best results.</p>
+    </div>
+
+    <div class="card">
+        <img src="service2.jpg">
+        <h3>Weight Loss</h3>
+        <p>Customized programs to help you lose weight.</p>
+    </div>
+
+    <div class="card">
+        <img src="service3.jpg">
+        <h3>Diet Plans</h3>
+        <p>Healthy diet guidance for better fitness.</p>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact Us</h2>
+
+    <p>📍Tanuku,west godavari, Andhra Pradesh</p>
+    <p>📞 9876543210</p>
+    <p>🕒 Mon–Sat: 5 AM – 10 PM</p>
+
+    <p>Visit us today and start your fitness journey.</p>
+</section>
+
+<footer>
+    <p>© 2026 Smart Fitness Gym</p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+function openForm() {
+    document.getElementById("joinForm").style.display = "flex";
+}
+
+function closeForm() {
+    document.getElementById("joinForm").style.display = "none";
+}
+
+function submitForm() {
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let address = document.getElementById("address").value;
+
+    if (name === "" || phone === "" || address === "") {
+        alert("Please fill all fields!");
+        return;
+    }
+
+    if (phone.length !== 10 || isNaN(phone)) {
+        alert("Enter a valid 10-digit phone number!");
+        return;
+    }
+
+    alert("Thank you! Your details have been submitted.");
+
+    document.getElementById("name").value = "";
+    document.getElementById("phone").value = "";
+    document.getElementById("address").value = "";
+
+    closeForm();
+}
+</script>
+
+</body>
+</html>

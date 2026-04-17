@@ -1,0 +1,105 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: #f0f4f8;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #1e3a8a, #2563eb);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+
+nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #f97316;
+}
+
+/* HERO */
+.hero {
+    background: url('hero.jpg') no-repeat center center/cover;
+    height: 90vh;
+    position: relative;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero button {
+    background: #f97316;
+    border: none;
+    padding: 12px 25px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hero button:hover {
+    background: #ea580c;
+}
+
+/* SECTIONS */
+section {
+    padding: 40px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* ABOUT IMAGE */
+.about-img {
+    width: 300px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    padding: 15px;
+    margin: 15px;
+    display: inline-block;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* CONTACT */
+#contact {
+    background: #e0f2fe;
+}
+
+/* FOOTER */
+footer {
+    background: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.overlay {
+    background: rgba(0,0,0,0.6);
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
