@@ -1,105 +1,84 @@
 body {
-    font-family: 'Segoe UI', sans-serif;
+    background: red;
     margin: 0;
-    background: #f0f4f8;
+    font-family: Arial;
+
+    /* BACKGROUND IMAGE */
+    background-image: url("bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-/* HEADER */
-header {
-    background: linear-gradient(90deg, #1e3a8a, #2563eb);
+/* DARK OVERLAY */
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    min-height: 100vh;
+    padding: 20px;
     color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 30px;
 }
 
-nav a {
-    color: white;
-    margin-left: 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #f97316;
-}
-
-/* HERO */
-.hero {
-    background: url('hero.jpg') no-repeat center center/cover;
-    height: 90vh;
-    position: relative;
+/* TITLE */
+h1 {
     text-align: center;
-    padding: 80px 20px;
+    color: #facc15;
 }
 
-.hero button {
-    background: #f97316;
+/* FORM */
+.form {
+    background: rgba(255,255,255,0.15);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* INPUT */
+input {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
     border: none;
-    padding: 12px 25px;
+}
+
+/* BUTTON */
+button {
+    padding: 10px;
+    background: #22c55e;
     color: white;
-    font-size: 16px;
+    border: none;
     cursor: pointer;
     border-radius: 5px;
 }
 
-.hero button:hover {
-    background: #ea580c;
+button:hover {
+    background: #16a34a;
 }
 
-/* SECTIONS */
-section {
-    padding: 40px;
-    text-align: center;
-    line-height: 1.6;
+/* SEARCH */
+#search {
+    display: block;
+    margin: 10px auto;
+    width: 50%;
 }
 
-/* ABOUT IMAGE */
-.about-img {
-    width: 300px;
-    border-radius: 10px;
-    margin: 20px 0;
-}
-
-/* CARDS */
+/* CARD */
 .card {
-    background: white;
+    background: rgba(255,255,255,0.2);
+    margin: 15px auto;
     padding: 15px;
-    margin: 15px;
-    display: inline-block;
-    width: 250px;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
-
-.card img {
-    width: 100%;
+    width: 80%;
     border-radius: 10px;
 }
 
-.card:hover {
-    transform: scale(1.05);
+/* STATUS COLORS */
+.status-new {
+    color: #3b82f6;
 }
 
-/* CONTACT */
-#contact {
-    background: #e0f2fe;
+.status-contacted {
+    color: #f97316;
 }
 
-/* FOOTER */
-footer {
-    background: #1e3a8a;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-.overlay {
-    background: rgba(0,0,0,0.6);
-    color: white;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.status-converted {
+    color: #22c55e;
 }
